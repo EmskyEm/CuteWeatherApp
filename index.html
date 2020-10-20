@@ -1,13 +1,73 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
+<html>
+
+<head>
+    <title>Emsky's Weather App</title>
     <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css" />
-  </head>
-  <body>
-    <h1>...GitHub is awesome!...</h1>
-    <script src="script.js"></script>
-  </body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+        integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
+    <link rel="stylesheet" href="src/style.css" />
+
+</head>
+
+<body>
+    <form id="search-form">
+        <div class="input-group mb-3">
+            <div class="input-group-prepend">
+                <span class="input-group-text" id="inputGroup-sizing-default">
+                    Write your city here</span>
+                <input type="search" placeholder="..." autofocus="on" autocomplete="off" id="city-input"
+                    class="form-control shadow-sm" />
+            </div>
+        </div>
+        <button type="search" class="btn btn-primary btn-default">Search</button>
+        <button type="submit" class="btn btn-secondary btn-default" id="current-location-button">Current
+        </button>
+    </form>
+
+    <div class="row">
+
+        <strong>
+            <div id="city">
+        </strong>
+        <div id="date"></div>
+        <div id="description"></div>
+    </div>
+
+
+
+    <strong>
+        <div id="slnko">
+            <img src="src/SUNwithRose.jpg" width="150" />
+        </div>
+
+        <span class="temperature" id="temperature">28</span><span class="units">
+            <a href="#" id="celsius-link">°C</a> |
+            <a href="#" id="fahrenheit-link">°F</a>
+        </span>
+
+        <ul>
+            <li>
+                Humidity: <span id="humidity"></span>%
+            </li>
+            <li>
+                Wind: <span id="wind"></span> km/h
+            </li>
+        </ul>
+
+        <div class="row">
+
+            <div class="col-2"> TUE 27°C </div>
+            <div class="col-2"> WED 26°C </div>
+            <div class="col-2"> THU 27°C </div>
+            <div class="col-2"> FRI 28°C </div>
+            <div class="col-2"> SAT 26°C </div>
+        </div>
+        </div>
+        </div>
+        <script src="./src/index.js"></script>
+</body>
+
 </html>
