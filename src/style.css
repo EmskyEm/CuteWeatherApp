@@ -1,0 +1,146 @@
+ul {
+  list-style: none;
+}
+
+.container {
+  margin: 10px auto;
+  position: center;
+  text-align: center;
+}
+
+.input-group-text {
+  border-color: #88c5e8;
+  background: transparent;
+  margin-top: 4px;
+  position: relative;
+  border: 1px solid #569ee2;
+  width: 210px;
+  left: 100px;
+}
+
+#city-input {
+  border-color: #88c5e8;
+  background: transparent;
+  border: 2px solid #fcde85;
+  margin-top: 4px;
+  position: relative;
+  left: 100px;
+  width: 320px;
+}
+
+body {
+  position: relative;
+  text-align: center;
+  padding: 80px;
+  max-width: 900px;
+  margin: auto;
+  border-radius: 10px;
+  border: 3px solid #fcde85;
+  margin-top: 40px;
+}
+
+.btn-primary {
+  border: 1px solid #fcde85;
+  text-align: center;
+  position: center;
+  margin: auto;
+  color: #545454;
+  background: transparent;
+  border-color: #569ee2;
+  width: 5cm;
+}
+
+.btn-secondary {
+  border: 1px solid #fcde85;
+  text-align: center;
+  position: center;
+  margin: auto;
+  color: #545454;
+  background: transparent;
+  border-color: #569ee2;
+  width: 5cm;
+}
+
+.col-2 {
+  position: center;
+  color: #545454;
+  font-family: Arial, Helvetica, sans-serif;
+  margin-top: 50px;
+  left: 10px;
+  position: center;
+  text-align: center;
+  position: center;
+  margin: auto;
+  top: 30px;
+}
+
+#slnko {
+  top: 20px;
+  position: relative;
+  display: block;
+  margin: 0auto;
+  width: 300px;
+  left: 100px;
+}
+
+#date {
+  top: 1px;
+  position: relative;
+  display: block;
+  margin: 0auto;
+  right: 30px;
+}
+
+#description {
+  top: 1px;
+  position: relative;
+  display: block;
+  margin: 0auto;
+  right: 15px;
+}
+
+#city {
+  top: 20px;
+  position: relative;
+  right: 100px;
+  display: block;
+  margin: 0auto;
+  left: 157px;
+}
+
+#temperature {
+  position: center;
+  position: relative;
+  font-size: 25px;
+  left: 68px;
+  top: 3px;
+}
+
+#wind {
+  position: relative;
+  left: 180px;
+  position: relative;
+  font-size: 15px;
+  bottom: 25px;
+  left: 549px;
+}
+
+#humidity {
+  position: relative;
+  left: 180px;
+  position: relative;
+  font-size: 15px;
+  bottom: 40px;
+  left: 600px;
+}
+
+.units {
+  position: center;
+  left: 120px;
+  position: relative;
+  font-size: 20px;
+  bottom: 30px;
+  display: block;
+  margin: 0auto;
+  color: black;
+}
