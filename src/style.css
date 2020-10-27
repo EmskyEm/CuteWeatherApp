@@ -2,20 +2,15 @@ ul {
   list-style: none;
 }
 
-.container {
-  margin: 10px auto;
-  position: center;
-  text-align: center;
-}
-
 .input-group-text {
-  border-color: #88c5e8;
+  border-color: transparent;
   background: transparent;
   margin-top: 4px;
   position: relative;
-  border: 1px solid #569ee2;
+  border: transparent;
   width: 210px;
-  left: 100px;
+  left: 120px;
+  font-size: large;
 }
 
 #city-input {
@@ -36,7 +31,7 @@ body {
   margin: auto;
   border-radius: 10px;
   border: 3px solid #fcde85;
-  margin-top: 40px;
+  margin-top: 90px;
 }
 
 .btn-primary {
@@ -62,14 +57,12 @@ body {
 }
 
 .col-2 {
-  position: center;
+  position: relative;
   color: #545454;
   font-family: Arial, Helvetica, sans-serif;
   margin-top: 50px;
-  left: 10px;
-  position: center;
+  right: 130px;
   text-align: center;
-  position: center;
   margin: auto;
   top: 30px;
 }

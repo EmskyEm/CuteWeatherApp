@@ -13,6 +13,7 @@
 </head>
 
 <body>
+    <div class="weather-app">
     <form id="search-form">
         <div class="input-group mb-3">
             <div class="input-group-prepend">
@@ -27,36 +28,54 @@
         </button>
     </form>
 
-    <div class="row">
 
-        <strong>
-            <div id="city">
-        </strong>
-        <div id="date"></div>
-        <div id="description"></div>
+<div class="container">
+    <div class ="col-4">
+    <h1>
+        New York
+    </h1>
+    <ul>
+        <li>
+            Friday 05:00
+        </li>
+        <li>
+            Clear
+        </li>
+    </div>
+    </ul>
+
+    <div class="row">
+        <div class="col-6">
+            <div id="slnko">
+                <img src="src/img/SUNwithRose.jpg" width="150" alt="Clear" 
+                />
+                12°C | °F
+            </div>
+        </div>
+        <div class="col-6">
+            <ul>
+                <li>
+Precipitation: 0%
+                </li>
+                <li>
+                    Humidity: 73%
+                </li>
+        <li>
+            Wind: 2 km/h
+        </li>
+            </ul>
+        </div>
+    </div>
     </div>
 
-
-
-    <strong>
-        <div id="slnko">
-            <img src="src/SUNwithRose.jpg" width="150" />
-        </div>
-
+        
+<strong>
         <span class="temperature" id="temperature">28</span><span class="units">
             <a href="#" id="celsius-link">°C</a> |
             <a href="#" id="fahrenheit-link">°F</a>
         </span>
-
-        <ul>
-            <li>
-                Humidity: <span id="humidity"></span>%
-            </li>
-            <li>
-                Wind: <span id="wind"></span> km/h
-            </li>
-        </ul>
-
+    </strong>
+       
         <div class="row">
 
             <div class="col-2"> TUE 27°C </div>
@@ -65,11 +84,14 @@
             <div class="col-2"> FRI 28°C </div>
             <div class="col-2"> SAT 26°C </div>
         </div>
-        </div>
-        </div>
+    </br>
+</br>
+</br>
+        <small>
+            <a href="https://github.com/EmskyEm/CuteWeatherApp" target="_blank">Open-source code</a>
+            by Ema Korabska
+        </small>
         <a href="https://www.netlify.com"></a>
-
-        <script src="src/index.js"></script>
+        <script src="src/script.js"></script>
 </body>
-
 </html>
