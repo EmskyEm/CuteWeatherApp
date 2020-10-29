@@ -13,85 +13,88 @@
 </head>
 
 <body>
-    <div class="weather-app">
-    <form id="search-form">
-        <div class="input-group mb-3">
-            <div class="input-group-prepend">
-                <span class="input-group-text" id="inputGroup-sizing-default">
-                    Write your city here</span>
-                <input type="search" placeholder="..." autofocus="on" autocomplete="off" id="city-input"
-                    class="form-control shadow-sm" />
+
+        <div class="weather-app">
+            <form id="search-form">
+                <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="inputGroup-sizing-default">
+                            Write your city here</span>
+                        <input type="search" placeholder="..." autofocus="on" autocomplete="off" id="city-input"
+                            class="form-control shadow-sm" />
+                    </div>
+                </div>
+                <button type="search" class="btn btn-primary btn-default">Search</button>
+                <button type="submit" class="btn btn-secondary btn-default" id="current-location-button">Current
+                </button>
+            </form>
+
+
+            <div class="container">
+                <div class="col-4">
+                    <h1>
+                        New York
+                    </h1>
+                    <ul>
+                        <li>
+                            Friday 05:00
+                        </li>
+                        <li>
+                            Clear
+                        </li>
+                </div>
+                </ul>
+
+                <div class="row">
+                    <div class="col-6">
+                        <div id="slnko">
+                            <div class="clearfix">
+                            <img src="src/img/SUNwithRose.jpg" width="150" alt="Clear" />
+                    
+                           <div id = "temperature">
+                               <strong> 12 </strong><span class="units"> °C | °F </span>
+                               </div>
+                        </div>  
+                    </div>
+                </div>
+                    <div class="col-6">
+                        <ul>
+                            <li>
+                                Precipitation: 0%
+                            </li>
+                            <li>
+                                Humidity: 73%
+                            </li>
+                            <li>
+                                Wind: 2 km/h
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
-        </div>
-        <button type="search" class="btn btn-primary btn-default">Search</button>
-        <button type="submit" class="btn btn-secondary btn-default" id="current-location-button">Current
-        </button>
-    </form>
 
 
-<div class="container">
-    <div class ="col-4">
-    <h1>
-        New York
-    </h1>
-    <ul>
-        <li>
-            Friday 05:00
-        </li>
-        <li>
-            Clear
-        </li>
-    </div>
-    </ul>
 
-    <div class="row">
-        <div class="col-6">
-            <div id="slnko">
-                <img src="src/img/SUNwithRose.jpg" width="150" alt="Clear" 
-                />
-                12°C | °F
+            <div class="row">
+
+                <div class="col-2"> TUE 27°C </div>
+                <div class="col-2"> WED 26°C </div>
+                <div class="col-2"> THU 27°C </div>
+                <div class="col-2"> FRI 28°C </div>
+                <div class="col-2"> SAT 26°C </div>
             </div>
-        </div>
-        <div class="col-6">
-            <ul>
-                <li>
-Precipitation: 0%
-                </li>
-                <li>
-                    Humidity: 73%
-                </li>
-        <li>
-            Wind: 2 km/h
-        </li>
-            </ul>
-        </div>
-    </div>
-    </div>
 
-        
-<strong>
-        <span class="temperature" id="temperature">28</span><span class="units">
-            <a href="#" id="celsius-link">°C</a> |
-            <a href="#" id="fahrenheit-link">°F</a>
-        </span>
-    </strong>
-       
-        <div class="row">
-
-            <div class="col-2"> TUE 27°C </div>
-            <div class="col-2"> WED 26°C </div>
-            <div class="col-2"> THU 27°C </div>
-            <div class="col-2"> FRI 28°C </div>
-            <div class="col-2"> SAT 26°C </div>
         </div>
-    </br>
-</br>
-</br>
-        <small>
-            <a href="https://github.com/EmskyEm/CuteWeatherApp" target="_blank">Open-source code</a>
-            by Ema Korabska
-        </small>
-        <a href="https://www.netlify.com"></a>
-        <script src="src/script.js"></script>
+        <center>
+            <small>
+                <a href="https://github.com/EmskyEm/CuteWeatherApp" target="_blank">Open-source code</a>
+                by Ema Korabska
+            </small>
+        </center>
+    
+    
+    <a href="https://www.netlify.com"></a>
+    <script src="src/script.js"></script>
 </body>
+
 </html>
