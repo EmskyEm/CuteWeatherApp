@@ -1,12 +1,3 @@
-h1 {
-  left: 100px;
-  left: -5px;
-  font-size: 30px;
-  font-weight: 80;
-  margin-right: -83px;
-  margin-top: 20px;
-}
-
 ul {
   margin: 0;
   padding: 0;
@@ -76,30 +67,64 @@ li {
 
 #slnko {
   width: 200px;
-  height: 200px;
-  position: fixed;
-  top: 50%;
-  left: 50%;
-  margin-top: -190px;
-  margin-left: -100px;
+  position: relative;
+  bottom: 24%;
+  left: 82%;
   text-align: center;
+  margin: 0;
+}
+
+#city {
+  left: 100px;
+  left: -5px;
+  font-size: px;
+  font-weight: 200;
+  margin-right: -83px;
+  margin-top: 20px;
+}
+#date {
+  margin: 0;
+  padding: 0;
+  font-size: 16px;
+  font-weight: 100;
+  margin-right: -83px;
+}
+
+#humidity {
+  position: relative;
+  left: 180px;
+  font-size: 15px;
+  bottom: 40px;
+  left: 600px;
+}
+
+#wind {
+  position: relative;
+  left: 180px;
+  position: relative;
+  font-size: 15px;
+  bottom: 25px;
+  left: 549px;
 }
 
 #temperature {
   position: relative;
-  font-size: 45px;
-  left: 68px;
-  bottom: 10px;
-  font-weight: 70;
-  bottom: 30px;
+  font-size: 30px;
+  right: 70px;
+  top: 73px;
+  font-weight: 300;
+  text-align: center;
+  margin: 0;
 }
 
 .units {
   position: relative;
   font-size: 18px;
-  right: 5px;
+  left: 60px;
   bottom: 15px;
   font-weight: 300;
+  text-align: center;
+  margin: 0;
 }
 
 .weather-app {
@@ -111,4 +136,11 @@ li {
   border: 3px solid #fcde85;
   margin-top: 100px;
   padding-bottom: 170px;
+  position: relative;
+}
+
+.weather-icon {
+  position: absolute;
+  right: -75px;
+  bottom: -75px;
 }

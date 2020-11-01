@@ -3,12 +3,13 @@
 
 <head>
     <title>Emsky's Weather App</title>
+    
     <meta charset="UTF-8" />
     <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
         integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous" />
-    <link rel="stylesheet" href="src/style.css" />
+    <link rel="stylesheet" href="../myCute-weather-app/style.css">
 
 </head>
 
@@ -32,13 +33,10 @@
 
             <div class="container">
                 <div class="col-4">
-                    <h1>
-                        New York
-                    </h1>
-                    <ul>
-                        <li>
-                            Friday 05:00
-                        </li>
+          <ul>         
+        <div id ="city">
+          Barcelona, Spain </div>
+                        <div id="date"></div>
                         <li>
                             Clear
                         </li>
@@ -49,11 +47,13 @@
                     <div class="col-6">
                         <div id="slnko">
                             <div class="clearfix">
-                            <img src="src/img/SUNwithRose.jpg" width="150" alt="Clear" />
+                            <img src="src/img/SUNwithCLOUD.jpg" width="150" alt="Clear" />
                     
-                           <div id = "temperature">
-                               <strong> 12 </strong><span class="units"> °C | °F </span>
-                               </div>
+                           <span class = "temperature" id = "temperature">28</span>
+                           <span class= "units">
+                <a href= "#" id = "celsius-link">°C</a> |
+                <a href="#" id = "fahrenheit-link">°F</a> 
+              </span>
                         </div>  
                     </div>
                 </div>
@@ -63,10 +63,10 @@
                                 Precipitation: 0%
                             </li>
                             <li>
-                                Humidity: 73%
+                               Humidity: <span id= "humidity">81</span>%
                             </li>
                             <li>
-                                Wind: 2 km/h
+                               Wind: <span id="wind">7</span> mph
                             </li>
                         </ul>
                     </div>
@@ -83,8 +83,11 @@
                 <div class="col-2"> FRI 28°C </div>
                 <div class="col-2"> SAT 26°C </div>
             </div>
-
         </div>
+        <img src="src/img/SUN.jpg" width="300" alt="Clear" class="weather-icon" />
+​
+        </div>
+
         <center>
             <small>
                 <a href="https://github.com/EmskyEm/CuteWeatherApp" target="_blank">Open-source code</a>
@@ -94,7 +97,6 @@
     
     
     <a href="https://www.netlify.com"></a>
-    <script src="src/script.js"></script>
+   <script src="../myCute-weather-app/script.js"></script> 
 </body>
-
 </html>
