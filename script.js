@@ -39,16 +39,28 @@ function handleSubmit(event) {
   search(city);
 }
 
+function cToF(celsius) {
+  return (celsius * 9) / 5 + 32;
+}
+
+function fToC(fahrenheit) {
+  return ((fahrenheit - 32) * 5) / 9;
+}
+
 function convertToFahrenheit(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#unit-number");
-  temperatureElement.innerHTML = 66;
+  var celsius = temperatureElement.innerHTML;
+  var fahrenheit = cToF(celsius);
+  temperatureElement.innerHTML = Math.round(fahrenheit);
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
   let temperatureElement = document.querySelector("#unit-number");
-  temperatureElement.innerHTML = 19;
+  var fahrenheit = temperatureElement.innerHTML;
+  var celsius = fToC(fahrenheit);
+  temperatureElement.innerHTML = Math.round(celsius);
 }
 
 let dateElement = document.querySelector("#date");
