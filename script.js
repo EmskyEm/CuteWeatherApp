@@ -18,7 +18,7 @@ function formatDate(date) {
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
-  document.querySelector("#temperature").innerHTML = Math.round(
+  document.querySelector("#unit-number").innerHTML = Math.round(
     response.data.main.temp
   );
 
@@ -41,13 +41,13 @@ function handleSubmit(event) {
 
 function convertToFahrenheit(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#unit-number");
   temperatureElement.innerHTML = 66;
 }
 
 function convertToCelsius(event) {
   event.preventDefault();
-  let temperatureElement = document.querySelector("#temperature");
+  let temperatureElement = document.querySelector("#unit-number");
   temperatureElement.innerHTML = 19;
 }
 
