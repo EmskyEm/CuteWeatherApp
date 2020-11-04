@@ -128,7 +128,7 @@ li {
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 10px;
-  border: 10px solid #fcde85;
+  border: 8px solid #fcde85;
   margin-top: 100px;
   padding-bottom: 170px;
   position: relative;
@@ -142,8 +142,4 @@ li {
   z-index: 1;
   width: 999px;
   transform: rotate(-15deg);
-}
-
-.github-link {
-  z-index: 2;
 }
