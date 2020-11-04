@@ -128,7 +128,7 @@ li {
   max-width: 1000px;
   margin: 0 auto;
   border-radius: 10px;
-  border: 3px solid #fcde85;
+  border: 10px solid #fcde85;
   margin-top: 100px;
   padding-bottom: 170px;
   position: relative;
@@ -137,10 +137,11 @@ li {
 
 .corner-sun {
   position: absolute;
-  right: -133px;
-  bottom: -89px;
+  right: -95px;
+  bottom: -205px;
   z-index: 1;
   width: 999px;
+  transform: rotate(-15deg);
 }
 
 .github-link {
