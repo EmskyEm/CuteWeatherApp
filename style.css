@@ -70,7 +70,7 @@ li {
   z-index: 2;
 }
 
-#slnko {
+#weather-icon {
   z-index: 2;
 }
 
@@ -141,4 +141,8 @@ li {
   bottom: -89px;
   z-index: 1;
   width: 999px;
+}
+
+.github-link {
+  z-index: 2;
 }
