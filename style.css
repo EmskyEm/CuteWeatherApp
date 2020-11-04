@@ -9,6 +9,7 @@ li {
   padding: 0;
   font-size: 16px;
   font-weight: 100;
+  z-index: 2;
 }
 
 .input-group-text {
@@ -20,6 +21,7 @@ li {
   width: 210px;
   left: 120px;
   font-size: large;
+  z-index: 2;
 }
 
 #city-input {
@@ -30,6 +32,7 @@ li {
   position: relative;
   left: 100px;
   width: 320px;
+  z-index: 2;
 }
 
 .btn-primary {
@@ -41,6 +44,7 @@ li {
   background: transparent;
   border-color: #569ee2;
   width: 5cm;
+  z-index: 2;
 }
 
 .btn-secondary {
@@ -52,6 +56,7 @@ li {
   background: transparent;
   border-color: #569ee2;
   width: 5cm;
+  z-index: 2;
 }
 
 .col-2 {
@@ -66,25 +71,30 @@ li {
 }
 
 #slnko {
+  z-index: 2;
 }
 
 #city {
   font-size: 20px;
   font-weight: 200;
+  z-index: 2;
 }
 #date {
   margin: 0;
   padding: 0;
   font-size: 16px;
   font-weight: 100;
+  z-index: 2;
 }
 
 #humidity {
   font-size: 15px;
+  z-index: 2;
 }
 
 #wind {
   font-size: 15px;
+  z-index: 2;
 }
 
 #unit-number {
@@ -92,12 +102,14 @@ li {
   font-weight: 300;
   text-align: center;
   margin: 0;
+  z-index: 2;
 }
 
 #temperature {
   position: relative;
   top: -20px;
   margin-left: 100px;
+  z-index: 2;
 }
 
 .units {
@@ -107,6 +119,7 @@ li {
   font-weight: 300;
   text-align: center;
   margin: 0;
+  z-index: 2;
 }
 
 .weather-app {
@@ -119,12 +132,13 @@ li {
   margin-top: 100px;
   padding-bottom: 170px;
   position: relative;
+  z-index: 2;
 }
 
 .corner-sun {
   position: absolute;
-  right: 13px;
-  bottom: -49px;
+  right: -133px;
+  bottom: -89px;
   z-index: 1;
-  width: 597px;
+  width: 999px;
 }
