@@ -18,14 +18,26 @@ function formatDate(date) {
 
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
+
   document.querySelector("#unit-number").innerHTML = Math.round(
     response.data.main.temp
   );
 
+  document.querySelector("#feelsLike").innerHTML = Math.round(
+    response.data.main.feels_like
+  );
+  document.querySelector("#conditions").innerHTML =
+    response.data.weather[0].main;
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
   );
+
+  document.querySelector("#weather-icon").src =
+    "https://openweathermap.org/img/wn/" +
+    response.data.weather[0].icon +
+    "@2x.png";
 }
 
 function search(city) {
