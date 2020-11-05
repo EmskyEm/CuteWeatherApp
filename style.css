@@ -15,12 +15,13 @@ li {
 .input-group-text {
   border-color: transparent;
   background: transparent;
-  margin-top: 4px;
+  margin-top: 2px;
   position: relative;
   border: transparent;
-  width: 210px;
-  left: 120px;
-  font-size: large;
+  width: 223px;
+  left: 61px;
+  font-size: 19px;
+  font-weight: 200;
   z-index: 2;
 }
 
@@ -75,8 +76,8 @@ li {
 }
 
 #city {
-  font-size: 20px;
-  font-weight: 200;
+  font-size: 26px;
+  font-weight: 210;
   z-index: 2;
 }
 #date {
