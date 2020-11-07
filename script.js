@@ -51,12 +51,10 @@ function displayWeatherCondition(response) {
     response.data.timezone
   );
 
-  document.querySelector("#weather-icon").src =
-    "https://openweathermap.org/img/wn/" +
-    response.data.weather[0].icon +
-    "@2x.png";
-
-  // 'src/img/'+response.data.weather[0].icon + '.png";
+  document.querySelector("#weather-icon").Desktop / myCute -
+    weather -
+    app / src / img / +response.data.weather[0].icon +
+    ".png";
 }
 
 function search(city) {
