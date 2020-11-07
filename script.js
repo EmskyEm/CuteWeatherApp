@@ -51,10 +51,11 @@ function displayWeatherCondition(response) {
     response.data.timezone
   );
 
-  document.querySelector("#weather-icon").Desktop / myCute -
-    weather -
-    app / src / img / +response.data.weather[0].icon +
+  document.querySelector("#weather-icon").src /
+    img /
+    +response.data.weather[0].icon +
     ".png";
+  f;
 }
 
 function search(city) {
