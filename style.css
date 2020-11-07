@@ -144,3 +144,12 @@ li {
   width: 999px;
   transform: rotate(-15deg);
 }
+
+.left-corner-sun {
+  position: absolute;
+  left: -173px;
+  top: -128px;
+  z-index: 1;
+  width: 777px;
+  transform: rotate(150deg);
+}
