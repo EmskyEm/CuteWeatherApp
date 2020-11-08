@@ -1,8 +1,5 @@
-// My Functions
+// My Date & Time
 function formatDate(date, timezone) {
-  //console.log(city + "  " + timezone + "   " + date.toUTCString());
-
-  // now.getTimezoneOffset() returns local offset wrt UTC in minutes as UTC time - your local time
   let localOffsetInMs = date.getTimezoneOffset() * 60 * 1000;
   let targetOffsetInMs = timezone * 1000;
   let targetTimestamp = date.getTime() + localOffsetInMs + targetOffsetInMs;
@@ -34,6 +31,24 @@ function formatDate(date, timezone) {
   return `${day} ${hours}:${minutes}`;
 }
 
+//Formating the time for the FORECAST
+function formatHours(timestamp) {
+  let localDate = new Date(targetTimestamp);
+
+  let hours = localDate.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+
+  let minutes = localDate.getMinutes();
+  if (minutes < 10) {
+    minutes = `0${minutes}`;
+  }
+  return `${hours}:${minutes}`;
+}
+
+// Fetching data from openweathermap.org -to display their info on my app.
+
 function displayWeatherCondition(response) {
   document.querySelector("#city").innerHTML = response.data.name;
 
@@ -64,25 +79,32 @@ function displayWeatherCondition(response) {
 }
 
 //Converting my weather choices into action.Start on this section.
-function displayForecast(response) {
+function dispalyForecast(response) {
   let forecastElement = document.querySelector("#forecast");
-  let forecast = response.data.list[0];
-  console.log(forecast);
+  forecastElement.innerHTML = null;
+  let forecast = null;
 
-  forecastElement.innerHTML = `
-  <div class="col-2">
-             <h3>
-                 ${forecast.dt}
-            </h3>
-            <img 
-            src= "src/img/${forecast.weather[0].icon}.png"
-            />
-            <div class="weather-forecast-temperature">
-                    <strong>${Math.round(forecast.main.temp_max)}° </strong> 
-                    ${Math.round(forecast.main.temp_min)}°
-             </div>
-         </div>
-            `;
+  for (let index = 0; index < 6; index++) {
+    forecast = response.data.list[index];
+    forecastElement.innerHTML += `
+    <div class="col-2">
+      <h3>
+        ${formatHours(forecast.dt * 1000)}
+      </h3>
+      <img
+        src="http://openweathermap.org/img/wn/${
+          forecast.weather[0].icon
+        }@2x.png"
+      />
+      <div class="weather-forecast-temperature">
+        <strong>
+          ${Math.round(forecast.main.temp_max)}°
+        </strong>
+        ${Math.round(forecast.main.temp_min)}°
+      </div>
+    </div>
+  `;
+  }
 }
 
 function search(city) {
@@ -90,8 +112,8 @@ function search(city) {
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
 
-  apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
-  axios.get(apiUrl).then(displayForecast);
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(dispalyForecast);
 }
 
 function handleSubmit(event) {
@@ -124,12 +146,19 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsius);
 }
 
-//function convertToCurrentLocation(event) {
-//event.preventDefault();
-//let currentElement = document.querySelector();
-//}
+function convertToCurrentLocation(event) {
+  event.preventDefault();
+  navigator.geolocation.getCurrentPosition(getCurrentLocation);
+}
+function getCurrentLocation(position) {
+  let lat = position.coords.latitude;
+  let lon = position.coords.longitude;
+  let apiKey = "8f2ac4f91e4219d33d78cabca0939d87";
+  let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayWeatherCondition);
+}
 
-//Get
+//
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
 
@@ -142,7 +171,5 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-//search("Barcelona")
-
-//let currentButton = document.querySelector("#current-button");
-//currentButton.addEventListener("click", convertToCurrentLocation);
+let currentButton = document.querySelector("#current-location-button");
+currentButton.addEventListener("click", convertToCurrentLocation);

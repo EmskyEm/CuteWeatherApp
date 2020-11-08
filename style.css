@@ -147,9 +147,8 @@ li {
 
 .left-corner-sun {
   position: absolute;
-  left: -173px;
-  top: -128px;
+  left: 49px;
+  top: 38px;
   z-index: 1;
-  width: 777 px;
   transform: rotate(150deg);
 }
