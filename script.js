@@ -19,7 +19,15 @@ function formatDate(date, timezone) {
   }
 
   let dayIndex = localDate.getDay();
-  let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+  let days = [
+    "Sunday,",
+    "Monday,",
+    "Tuesday,",
+    "Wednesday,",
+    "Thursday,",
+    "Friday,",
+    "Saturday,",
+  ];
 
   let day = days[dayIndex];
   console.log(`${day} ${hours}:${minutes}`);
@@ -55,11 +63,37 @@ function displayWeatherCondition(response) {
     "src/img/" + response.data.weather[0].icon + ".png";
 }
 
+//Converting my weather choices into action.Start on this section.
+function displayForecast(response) {
+  let forecastElement = document.querySelector("#forecast");
+  let forecast = response.data.list[0];
+  console.log(forecast);
+
+  forecastElement.innerHTML = `
+  <div class="col-2">
+             <h3>
+                 ${forecast.dt}
+            </h3>
+            <img 
+            src= "src/img/${forecast.weather[0].icon}.png"
+            />
+            <div class="weather-forecast-temperature">
+                    <strong>${Math.round(forecast.main.temp_max)}° </strong> 
+                    ${Math.round(forecast.main.temp_min)}°
+             </div>
+         </div>
+            `;
+}
+
 function search(city) {
   let apiKey = "8f2ac4f91e4219d33d78cabca0939d87";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiURL = `https://api.openweathermap.org/data/2.5/forecast?q=${city}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(displayForecast);
 }
+
 function handleSubmit(event) {
   event.preventDefault();
   let city = document.querySelector("#city-input").value;
@@ -90,15 +124,14 @@ function convertToCelsius(event) {
   temperatureElement.innerHTML = Math.round(celsius);
 }
 
-function convertToCurrentLocation(event) {
-  event.preventDefault();
-  let;
-}
+//function convertToCurrentLocation(event) {
+//event.preventDefault();
+//let currentElement = document.querySelector();
+//}
 
 //Get
 let dateElement = document.querySelector("#date");
 let currentTime = new Date();
-//dateElement.innerHTML = formatDate(currentTime, currentTime.getTimezoneOffset());
 
 let searchForm = document.querySelector("#search-form");
 searchForm.addEventListener("submit", handleSubmit);
@@ -109,5 +142,7 @@ fahrenheitLink.addEventListener("click", convertToFahrenheit);
 let celsiusLink = document.querySelector("#celsius-link");
 celsiusLink.addEventListener("click", convertToCelsius);
 
-let currentButton = document.querySelector("#current-button");
-currentButton.addEventListener("click", convertToCurrentLocation);
+//search("Barcelona")
+
+//let currentButton = document.querySelector("#current-button");
+//currentButton.addEventListener("click", convertToCurrentLocation);

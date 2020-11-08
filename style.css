@@ -60,7 +60,7 @@ li {
   z-index: 2;
 }
 
-.col-2 {
+#forecast {
   position: relative;
   color: #545454;
   font-family: Arial, Helvetica, sans-serif;
@@ -150,6 +150,6 @@ li {
   left: -173px;
   top: -128px;
   z-index: 1;
-  width: 777px;
+  width: 777 px;
   transform: rotate(150deg);
 }
