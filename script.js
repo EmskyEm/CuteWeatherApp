@@ -79,7 +79,7 @@ function displayWeatherCondition(response) {
 }
 
 //Converting my weather choices into action.Start on this section.
-function displayForecast(response) {
+function dispalyForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
@@ -87,9 +87,9 @@ function displayForecast(response) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
     <div class="col-2">
-      <h3>
+      <strong>
         ${formatHours(forecast.dt * 1000)}
-      </h3>
+      </strong>
       <img class="forecast-icon"
         src="src/img/${forecast.weather[0].icon}.png"
       />
