@@ -33,7 +33,7 @@ function formatDate(date, timezone) {
 
 //Formating the time for the FORECAST
 function formatHours(timestamp) {
-  let localDate = new Date(targetTimestamp);
+  let localDate = new Date(timestamp);
 
   let hours = localDate.getHours();
   if (hours < 10) {
@@ -79,11 +79,10 @@ function displayWeatherCondition(response) {
 }
 
 //Converting my weather choices into action.Start on this section.
-function dispalyForecast(response) {
+function displayForecast(response) {
   let forecastElement = document.querySelector("#forecast");
   forecastElement.innerHTML = null;
   let forecast = null;
-
   for (let index = 0; index < 6; index++) {
     forecast = response.data.list[index];
     forecastElement.innerHTML += `
@@ -91,10 +90,8 @@ function dispalyForecast(response) {
       <h3>
         ${formatHours(forecast.dt * 1000)}
       </h3>
-      <img
-        src="http://openweathermap.org/img/wn/${
-          forecast.weather[0].icon
-        }@2x.png"
+      <img class="forecast-icon"
+        src="src/img/${forecast.weather[0].icon}.png"
       />
       <div class="weather-forecast-temperature">
         <strong>
