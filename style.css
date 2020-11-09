@@ -101,7 +101,7 @@ li {
 }
 
 #unit-number {
-  font-size: 64px;
+  font-size: 50px;
   font-weight: 400;
   text-align: center;
   margin: 0;
@@ -118,7 +118,7 @@ li {
 .units {
   position: relative;
   font-size: 18px;
-  top: -8px;
+  top: -25px;
   font-weight: 300;
   text-align: center;
   margin: 0;
