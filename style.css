@@ -103,6 +103,8 @@ li {
 #unit-number {
   font-size: 50px;
   font-weight: 400;
+  right: 17px;
+  position: relative;
   text-align: center;
   margin: 0;
   z-index: 2;
@@ -123,6 +125,7 @@ li {
   text-align: center;
   margin: 0;
   z-index: 2;
+  left: -14px;
 }
 
 .weather-app {
