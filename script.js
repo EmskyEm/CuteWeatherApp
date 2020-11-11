@@ -145,14 +145,19 @@ function convertToCelsius(event) {
 
 function convertToCurrentLocation(event) {
   event.preventDefault();
+
   navigator.geolocation.getCurrentPosition(getCurrentLocation);
 }
+
 function getCurrentLocation(position) {
   let lat = position.coords.latitude;
   let lon = position.coords.longitude;
   let apiKey = "8f2ac4f91e4219d33d78cabca0939d87";
   let apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
   axios.get(apiUrl).then(displayWeatherCondition);
+
+  apiUrl = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${apiKey}&units=metric`;
+  axios.get(apiUrl).then(dispalyForecast);
 }
 
 //
